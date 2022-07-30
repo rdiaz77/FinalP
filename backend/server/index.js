@@ -4,21 +4,21 @@ const app = express()
 const PORT = process.env.PORT
 
 
-// link the ./controllers/places file with the main index file
-
-app.use('places',require('./controllers/places'))
-
 // MIDDLEWARE -- allows the use of JSX for server-side rendering (SSR) in Express 
 
-app.set('views', __dirname + '/views')
+
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 
+// link the ./controllers/places file with the main index file
+
+app.use('places',require('./controllers/places'))
+
 // Homepage route
 
 app.get('/', (req,res)=>{
-    res.send('this is my home page')
+    res.render("home")
 })
 
 // Login route

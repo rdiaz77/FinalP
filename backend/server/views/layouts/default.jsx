@@ -7,7 +7,7 @@ function Def (html){
         <html>
 
             <head>
-                <h1>SVTrace</h1>
+                <title>SVTrace</title>
             </head>
 
             <body>
