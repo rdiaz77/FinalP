@@ -8,6 +8,8 @@ function Def (html){
 
             <head>
                 <title>SVTrace</title>
+                {/* CSS link */}
+                <link rel="stylesheet" href="/css/style.css" /> 
             </head>
 
             <body>

@@ -8,7 +8,8 @@ function error404(){
         <Def>
 
         <main>
-            <h2>404: Page not found</h2>
+            <h2>404: Page not found - places view</h2>
+            <img src='/images/404Error_Dog.jpg' alt='dog reading a tablet -  page not found'/>
         </main>
 
 

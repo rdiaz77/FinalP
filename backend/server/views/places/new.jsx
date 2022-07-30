@@ -2,7 +2,7 @@ const React =  require('rect')
 const Def = require('../layouts/default')
 
 
-function newPlace () {
+function new_Place () {
     return(
         <Def>
             <main>
@@ -13,4 +13,4 @@ function newPlace () {
 }
 
 
-module.exports = newPlace
+module.exports = new_Place

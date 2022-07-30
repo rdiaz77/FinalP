@@ -14,6 +14,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 // link the ./controllers/places file with the main index file
 
 app.use('/places',require('./controllers/places'))
+app.use(express.static("public"))
 
 // Homepage route
 

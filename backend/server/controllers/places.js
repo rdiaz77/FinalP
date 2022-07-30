@@ -32,9 +32,21 @@ router.get('/', (req,res)=>{
     }]
     res.render('places/index', {places})
 
+
 })
+// Route to Add a New Place
 
 
+router.get('/new_place', (req,res)=>{
+    res.sender('places/new')
+
+
+
+})
+// Error 404 route
+router.get('*', (req,res)=>{
+    res.render('places/error404')
+})
 
 
 
