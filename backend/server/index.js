@@ -1,30 +1,40 @@
 require('dotenv').config()
 const express = require("express")
 const app = express()
+const PORT = process.env.PORT
 
 
+// link the ./controllers/places file with the main index file
+
+app.use('places',require('./controllers/places'))
+
+// MIDDLEWARE -- allows the use of JSX for server-side rendering (SSR) in Express 
+
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
 
 
 // Homepage route
 
-app.get('/', (res,req)=>{
-    console.log('this is my home page')
+app.get('/', (req,res)=>{
+    res.send('this is my home page')
 })
 
 // Login route
 
-app.get('/login', (res,req)=>{
-    console.log('this is my login page')
+app.get('/login', (req,res)=>{
+    res.send('this is my login page')
 })
 
 
 
 // wild operator route
 
-app.get('*', (res,req)=>{
-    res.statusCode(404).send("<h1>404 Page</h1>")
+app.get('*', (req,res)=>{
+    res.status(404).send("<h1>404 Page</h1>")
     
     
 })
 
-app.listen(process.env.PORT, () => console.log('awaken from express index js'))
+app.listen(PORT, () => console.log('awaken from express index js at port', PORT))
