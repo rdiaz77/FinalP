@@ -5,13 +5,13 @@ const Def = require('../layouts/default')
 function index (data){
 
     let selectedPlace = data.places.map((place)=> {
-        const {address, county, city, region} = place
+        const {name, address, county, city, region} = place
         
 
         return(
             <div>
         
-                <h2>{place.name}</h2>
+                <h2>{name}</h2>
                 <h3>{address}, {county}, {city}, {region} </h3>
                 
         

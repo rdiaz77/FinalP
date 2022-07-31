@@ -4,15 +4,12 @@ const app = express()
 const PORT = process.env.PORT
 
 
-// MIDDLEWARE -- allows the use of JSX for server-side rendering (SSR) in Express 
+// MIDDLEWARE (express)-- allows the use of JSX for server-side rendering (SSR) in Express 
+// link the ./controllers/places file with the main index file
 
 
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
-
-
-// link the ./controllers/places file with the main index file
-
 app.use(express.urlencoded({ extended: true }))
 app.use('/places',require('./controllers/places'))
 app.use(express.static("public"))

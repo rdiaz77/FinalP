@@ -15,6 +15,24 @@ router.get('/new', (req,res)=>{
     res.render('users/new')
 })
 
+// GET -- Show particular user
+
+
+router.get("/:id", (req,res)=>{
+
+    let id = Number(req.params.id)
+    
+    if(isNaN(id)){
+        res.render("error")
+    }else if(!users[id]){
+        res.render("error2")
+    }else {
+        res.render('users/show', {user : users[id]})
+    }
+    
+
+})
+
 // POST -- Receive the information to add a new user
 
 router.post('/', (req,res)=>{

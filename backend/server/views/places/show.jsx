@@ -2,16 +2,12 @@ const React = require("react")
 const Def = require("../layouts/default")
 
 
-function editPlace(){
-
-
+function show(data){
     return(
-
         <Def>
+            <h1>this page shows the individual place</h1>
 
-            <h1> thi form to edit a place</h1>
+            {data.place.name}
         </Def>
     )
 }
-
-module.exports = editPlace

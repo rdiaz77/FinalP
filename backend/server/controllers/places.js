@@ -10,6 +10,30 @@ router.get('/', (req,res)=>{
 
 
 })
+
+// GET - Show the selected Place
+
+router.get('/:id',(req,res)=>{
+    console.log(req.params)
+
+    let id = Number(req.params.id)
+    if(isNaN(id)) {
+        res.render('error404')
+    } 
+    else if(!places[id]){
+        res.render("error404")
+    }
+    
+    else {
+
+        res.render("/places/show", {place: places[id]})
+
+    }
+    
+})
+
+
+
 // GET -- Show the form to add a new place
 
 
@@ -18,7 +42,7 @@ router.get('/new', (req,res)=>{
 
 })
 
-// POST -- Receive the information to add a new place
+// POST -- Send the information to add a new place
 
 router.post('/', (req,res)=>{
     console.log(req.body)

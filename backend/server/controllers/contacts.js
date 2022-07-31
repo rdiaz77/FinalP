@@ -17,6 +17,25 @@ router.get('/new', (req,res)=>{
     res.render('contacts/new')
 })
 
+
+// GET -- Show particular user
+
+
+router.get("/:id", (req,res)=>{
+
+    let id = Number(req.params.id)
+    
+    if(isNaN(id)){
+        res.render("error")
+    }else if(!contacts[id]){
+        res.render("error2")
+    }else {
+        res.render('contacts/show', {contact : contacts[id]})
+    }
+    
+
+})
+
 // POST -- Receive the information to add a new contact
 
 router.post('/', (req,res)=>{
