@@ -4,14 +4,14 @@ const Def = require('../layouts/default')
 
 function index(data){
 
-    let selectedContacts = data.contacts.map((contact)=>{
-        const {contactName, contactPhone} = contact
+    let selectedUsers = data.users.map((user)=>{
+        const {userName, userPhone} = user
         
 
         return(
             <div>
         
-                <h2>{contactName}, {contactPhone} </h2>
+                <h2>{userName}, {userPhone} </h2>
                 
                 
         
@@ -25,7 +25,7 @@ function index(data){
 
         <Def>
             <h1>this is the index page of the contacts folder</h1>
-            <h2>{selectedContacts}</h2>
+            <h2>{selectedUsers}</h2>
         </Def>
     )
    

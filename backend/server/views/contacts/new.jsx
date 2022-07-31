@@ -13,12 +13,12 @@ function new_Contact(){
             <form action="/contacts" method='POST'>
                 <div>
                     <label htmlFor="name">Contact Name</label>
-                    <input type="text" name="contact_name" id="contact_name" />
+                    <input type="text" name="contactName" id="contactName" />
                 </div>
 
                 <div>
                     <label htmlFor="name">Phone Number</label>
-                    <input type="text" name="contact_phone_number" id="contact_phone_number" />
+                    <input type="text" name="contactPhone" id="contactPhone" />
                 </div>
 
                 <div>

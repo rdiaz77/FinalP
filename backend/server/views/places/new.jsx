@@ -34,16 +34,6 @@ function new_Place () {
                     </div>
 
                     <div>
-                        <label htmlFor="name">Contact Name</label>
-                        <input type="text" name="contact_name" id="contact_name" />
-                    </div>
-
-                    <div>
-                        <label htmlFor="name">Phone Number</label>
-                        <input type="text" name="contact_phone_number" id="contact_phone_number" />
-                    </div>
-                    
-                    <div>
                         <input type="submit" value="Add Place" />
                     </div>
 

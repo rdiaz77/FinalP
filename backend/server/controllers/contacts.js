@@ -6,13 +6,13 @@ const router = require("express").Router()
 router.get('/', (req,res)=>{
     let contacts = [{
         
-        mainContact : "John Doe",
-        mainContactPhone: "555-555-555"
+        contactName : "John Doe",
+        contactPhone: "555-555-555"
 
     }, {
         
-        mainContact : "Henry Doe",
-        mainContactPhone: "555-555-9999"
+        contactName : "Henry Doe",
+        contactPhone: "555-555-9999"
 
     }]
     res.render('contacts/index', {contacts})
