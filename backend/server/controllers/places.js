@@ -22,7 +22,11 @@ router.get('/new', (req,res)=>{
 
 router.post('/', (req,res)=>{
     console.log(req.body)
-    res.send('POST/places')
+    if(!req.body.address){
+        req.body.address = "not available"
+    }
+    places.push(req.body)
+    res.redirect('/places')
 })
 
 
