@@ -1,30 +1,11 @@
 const router = require("express").Router()
+const places = require('../models/places')
 
 
 
-// GET -- Show All Places
+// GET -- Show All Places -- getting the date from modules now
 router.get('/', (req,res)=>{
-    let places = [{
-        name: 'Clinica Alemana',
-        type : 'Private',
-        address : "Av. Vitacura 9000",
-        county: " Vitacura",
-        city: "Santiago",
-        region: "Metropolitana",
-        mainContact : "John Doe",
-        mainContactPhone: "555-555-555"
-
-    }, {
-        name: 'Hospital Padre Hurtado',
-        type : 'Public',
-        address : "Santa Rosa 10000",
-        county: " Pudahuel",
-        city: "Santiago",
-        region: "Metropolitana",
-        mainContact : "Henry Doe",
-        mainContactPhone: "555-555-9999"
-
-    }]
+    
     res.render('places/index', {places})
 
 

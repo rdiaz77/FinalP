@@ -1,22 +1,11 @@
 const router = require("express").Router()
+const contacts = require('../models/contacts')
 
 
-// GET Contacts
+// GET All Contacts -- from the modules folder
 
 router.get('/', (req,res)=>{
-    let contacts = [{
-        
-        contactName : "John",
-        contactLastName: "Doe",
-        contactPhone: "555-555-555"
-
-    }, {
-        
-        contactName : "Henry",
-        contactLastName: "Doe",
-        contactPhone: "555-555-9999"
-
-    }]
+    
     res.render('contacts/index', {contacts})
 
 

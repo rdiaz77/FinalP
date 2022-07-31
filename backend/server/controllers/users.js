@@ -1,23 +1,11 @@
 const router = require("express").Router()
+const users = require('../models/users')
 
 
-
-// GET Users
+// GET All Users -- now from the models folder
 
 router.get('/', (req,res)=>{
-    let users = [{
-        
-        userName : "Rafael",
-        userLastName: "Diaz",
-        userPhone: "555-555-1111"
-
-    }, {
-        
-        userName : "Jorge",
-        userLastName: "Donoso",
-        userPhone: "555-555-111"
-
-    }]
+    
     res.render('users/index', {users})
 
 
