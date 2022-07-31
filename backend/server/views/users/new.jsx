@@ -12,12 +12,17 @@ function new_User(){
 
             <form action="/users" method='POST'>
                 <div>
-                    <label htmlFor="name">User Name</label>
+                    <label htmlFor="name">User's Name</label>
                     <input type="text" name="userName" id="userContact" />
+                </div>
+                
+                <div>
+                    <label htmlFor="name">User's Last Name</label>
+                    <input type="text" name="userLastName" id="userLastContact" />
                 </div>
 
                 <div>
-                    <label htmlFor="name">User Phone</label>
+                    <label htmlFor="name">User's Phone</label>
                     <input type="text" name="userPhone" id="userPhone" />
                 </div>
 

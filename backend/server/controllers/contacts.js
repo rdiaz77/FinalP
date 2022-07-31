@@ -6,12 +6,14 @@ const router = require("express").Router()
 router.get('/', (req,res)=>{
     let contacts = [{
         
-        contactName : "John Doe",
+        contactName : "John",
+        contactLastName: "Doe",
         contactPhone: "555-555-555"
 
     }, {
         
-        contactName : "Henry Doe",
+        contactName : "Henry",
+        contactLastName: "Doe",
         contactPhone: "555-555-9999"
 
     }]
@@ -20,8 +22,18 @@ router.get('/', (req,res)=>{
 
 })
 
+// GET -- Show the form to add a new contact
+
 router.get('/new', (req,res)=>{
     res.render('contacts/new')
 })
+
+// POST -- Receive the information to add a new contact
+
+router.post('/', (req,res)=>{
+    console.log(req.body)
+    res.send('POST/contacts')
+})
+
 
 module.exports = router

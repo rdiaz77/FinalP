@@ -5,13 +5,13 @@ const Def = require('../layouts/default')
 function index(data){
 
     let selectedContacts = data.contacts.map((contact)=>{
-        const {contactName, contactPhone} = contact
+        const {contactName, contactLastName, contactPhone} = contact
         
 
         return(
             <div>
         
-                <h2>{contactName}, {contactPhone} </h2>
+                <h2>{contactName}, {contactLastName} {contactPhone} </h2>
                 
                 
         

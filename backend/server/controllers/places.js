@@ -2,7 +2,7 @@ const router = require("express").Router()
 
 
 
-// GET Places
+// GET -- Show All Places
 router.get('/', (req,res)=>{
     let places = [{
         name: 'Clinica Alemana',
@@ -24,24 +24,30 @@ router.get('/', (req,res)=>{
         mainContact : "Henry Doe",
         mainContactPhone: "555-555-9999"
 
-
-
-
-
     }]
     res.render('places/index', {places})
 
 
 })
-// Route to Add a New Place
+// GET -- Show the form to add a new place
 
 
 router.get('/new', (req,res)=>{
     res.render('places/new')
 
-
-
 })
+
+// POST -- Receive the information to add a new place
+
+router.post('/', (req,res)=>{
+    console.log(req.body)
+    res.send('POST/places')
+})
+
+
+
+
+
 
 
 
@@ -51,11 +57,6 @@ router.get('/new', (req,res)=>{
 router.get('*', (req,res)=>{
     res.render('places/error404')
 })
-
-
-
-
-
 
 
 

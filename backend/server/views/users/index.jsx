@@ -5,13 +5,13 @@ const Def = require('../layouts/default')
 function index(data){
 
     let selectedUsers = data.users.map((user)=>{
-        const {userName, userPhone} = user
+        const {userName, userLastName, userPhone} = user
         
 
         return(
             <div>
         
-                <h2>{userName}, {userPhone} </h2>
+                <h2>{userName}, {userLastName}, {userPhone} </h2>
                 
                 
         
