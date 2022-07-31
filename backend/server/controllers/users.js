@@ -19,7 +19,12 @@ router.get('/new', (req,res)=>{
 
 router.post('/', (req,res)=>{
     console.log(req.body)
-    res.send('POST/users')
+    if(!req.body.userPhone){
+        req.body.userPhone = 'not available'
+    }
+
+    users.push(req.body)
+    res.redirect('/users')
 })
 
 router.get('*', (req,res)=>{

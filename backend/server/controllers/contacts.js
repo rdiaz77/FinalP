@@ -21,7 +21,13 @@ router.get('/new', (req,res)=>{
 
 router.post('/', (req,res)=>{
     console.log(req.body)
-    res.send('POST/contacts')
+    if(!req.body.contactPhone){
+        req.body.contactPhone = "not available"
+
+    }
+    contacts.push(req.body)
+
+    res.redirect('/contacts')
 })
 
 

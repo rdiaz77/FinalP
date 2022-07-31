@@ -11,7 +11,7 @@ function index(data){
         return(
             <div>
         
-                <h2>{userName}, {userLastName}, {userPhone} </h2>
+                <h2>{userName} {userLastName}. Phone: {userPhone} </h2>
                 
                 
         
