@@ -1,7 +1,9 @@
 require('dotenv').config()
 const express = require("express")
+
 const app = express()
 const PORT = process.env.PORT
+
 
 
 // MIDDLEWARE (express)-- allows the use of JSX for server-side rendering (SSR) in Express 
@@ -11,10 +13,12 @@ const PORT = process.env.PORT
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.urlencoded({ extended: true }))
-app.use('/places',require('./controllers/places'))
+
 app.use(express.static("public"))
+app.use('/places',require('./controllers/places'))
 app.use('/contacts', require('./controllers/contacts'))
 app.use('/users', require('./controllers/users'))
+app.use('/support', require('./controllers/support'))
 
 // Homepage route
 

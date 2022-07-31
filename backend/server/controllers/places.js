@@ -3,12 +3,18 @@ const places = require('../models/places')
 
 
 
-// GET -- Show All Places -- getting the date from modules now
+// GET -- Index show all Places -- getting the date from modules now
 router.get('/', (req,res)=>{
     
     res.render('places/index', {places})
 
 
+})
+
+// GET -- Show route
+
+router.get("/show", (req,res)=>{
+    res.render('places/show')
 })
 
 // GET - Show the selected Place

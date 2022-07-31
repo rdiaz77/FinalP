@@ -4,14 +4,21 @@ const Def = require('../layouts/default')
 
 function index(data){
 
-    let selectedUsers = data.users.map((user)=>{
+    let selectedUsers = data.users.map((user, id)=>{
         const {userName, userLastName, userPhone} = user
         
 
         return(
             <div>
         
-                <h2>{userName} {userLastName}. Phone: {userPhone} </h2>
+                <h2>
+                   <a href={"/users/${id}"}>
+                        {userName} {userLastName}. 
+                    
+                    </a>
+                    Phone: {userPhone} 
+
+                </h2>
                 
                 
         

@@ -26,9 +26,9 @@ router.get("/:id", (req,res)=>{
     let id = Number(req.params.id)
     
     if(isNaN(id)){
-        res.render("error")
+        res.render("error404")
     }else if(!contacts[id]){
-        res.render("error2")
+        res.render("error404")
     }else {
         res.render('contacts/show', {contact : contacts[id]})
     }

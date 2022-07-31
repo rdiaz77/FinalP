@@ -10,6 +10,7 @@ function index(data){
 
         return(
             <div>
+                
         
                 <h2>{contactName} {contactLastName}. Phone: {contactPhone} </h2>
                 
@@ -24,6 +25,7 @@ function index(data){
     return(
 
         <Def>
+            <button onClick="href = '/contacts/new'"> Add New Contact</button>
             <h1>this is the index page of the contacts folder</h1>
             <h2>{selectedContacts}</h2>
         </Def>
