@@ -2,7 +2,6 @@ const router = require("express").Router()
 
 
 
-
 // GET Places
 router.get('/', (req,res)=>{
     let places = [{
@@ -37,12 +36,17 @@ router.get('/', (req,res)=>{
 // Route to Add a New Place
 
 
-router.get('/new_place', (req,res)=>{
-    res.sender('places/new')
+router.get('/new', (req,res)=>{
+    res.render('places/new')
 
 
 
 })
+
+
+
+
+
 // Error 404 route
 router.get('*', (req,res)=>{
     res.render('places/error404')

@@ -15,6 +15,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 app.use('/places',require('./controllers/places'))
 app.use(express.static("public"))
+app.use('/contacts', require('./controllers/contacts'))
 
 // Homepage route
 
