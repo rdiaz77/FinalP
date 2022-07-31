@@ -16,7 +16,7 @@ function Def (html){
                 <nav>
                     <ul>
                         <li>
-                            <a href="/">Dashboard</a>
+                            <a href="/dashboard">Dashboard</a>
                         </li>
                         <li>
                             <a href="/map">Map</a>

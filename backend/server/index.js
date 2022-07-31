@@ -1,6 +1,6 @@
+// const methodOverride = require('method-override');
 require('dotenv').config()
 const express = require("express")
-
 const app = express()
 const PORT = process.env.PORT
 
@@ -10,17 +10,20 @@ const PORT = process.env.PORT
 // link the ./controllers/places file with the main index file
 
 
+// app.use(methodOverride("_method"))
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.urlencoded({ extended: true }))
-
 app.use(express.static("public"))
+
+// View routes
 app.use('/places',require('./controllers/places'))
 app.use('/contacts', require('./controllers/contacts'))
 app.use('/users', require('./controllers/users'))
 app.use('/support', require('./controllers/support'))
+app.use('/dashboard', require('./controllers/dashboard'))
 
-// Homepage route
+// Homepage route 
 
 app.get('/', (req,res)=>{
     res.render("home")
