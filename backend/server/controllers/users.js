@@ -7,8 +7,6 @@ const users = require('../models/users')
 router.get('/', (req,res)=>{
     
     res.render('users/index', {users})
-
-
 })
 
 // GET -- Show the form to add a new user
