@@ -8,7 +8,7 @@ const { Sequelize } = require('sequelize')
 
 
 
-/// SEQUELIZE CONNECTION
+/// SEQUELIZE CONNECTION --- need to improve this part
 
 const sequelize = new Sequelize('SVTrace', 'postgres', "Asturias171#", {
     host: 'localhost',
