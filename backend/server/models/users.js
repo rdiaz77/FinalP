@@ -1,3 +1,12 @@
+//DEPENDENDIES
+const {sequelize, DataTypes, Model} = require('sequelize')
+
+
+
+
+
+
+
 module.exports = [{
         
     userName : "Rafael",
