@@ -9,6 +9,7 @@ function home(){
         <Def>
             <main>
                 <h1> this is the home form views folder</h1>
+                <h2>need to work on this</h2>
             </main>
         </Def>
     )
