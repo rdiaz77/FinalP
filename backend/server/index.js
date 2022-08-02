@@ -1,10 +1,10 @@
 // DEPENDENCIES
 const methodOverride = require('method-override');
 require('dotenv').config()
+const { Sequelize } = require('sequelize')
 const express = require("express")
 const app = express()
 const PORT = process.env.PORT
-const { Sequelize } = require('sequelize')
 
 
 

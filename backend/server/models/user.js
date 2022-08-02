@@ -1,5 +1,5 @@
 //DEPENDENCIES
-const {sequelize, DataTypes, Model} = require('sequelize')
+const {Sequelize, DataTypes, Model} = require('sequelize')
 
 
 
@@ -22,7 +22,7 @@ User.init({
 
 
 }, {
-    sequelize,
+    Sequelize,
     modelName: "User",
     tableName: "users",
     timestamps: false
@@ -35,18 +35,3 @@ module.exports = User
 
 
 
-
-
-// module.exports = [{
-        
-//     userName : "Rafael",
-//     userLastName: "Diaz",
-//     userPhone: "555-555-1111"
-
-// }, {
-    
-//     userName : "Jorge",
-//     userLastName: "Donoso",
-//     userPhone: "555-555-111"
-
-// }]
