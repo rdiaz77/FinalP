@@ -1,24 +1,32 @@
-const router = require("express").Router()
-const users = require('../models/user')
+const users = require("express").Router()
+const db = require('../models')
+const {user} = db
+
 
 
 // GET All Users -- now from the models folder
 
-router.get('/', (req,res)=>{
+users.get('/', async(req,res)=>{
+    try {
+        const foundUsers = await User.findAll()
+        res.status(200).json(foundUsers)
+    } catch(error){
+        res.status(500).json(error)
+    }
     
-    res.render('users/index', {users})
+    // res.render('users/index', {users})
 })
 
 // GET -- Show the form to add a new user
 
-router.get('/new', (req,res)=>{
+users.get('/new', (req,res)=>{
     res.render('users/new')
 })
 
 // GET -- Show particular user
 
 
-router.get("/:id", (req,res)=>{
+users.get("/:id", (req,res)=>{
 
     let id = Number(req.params.id)
 
@@ -35,7 +43,7 @@ router.get("/:id", (req,res)=>{
 
 // POST -- Receive the information to add a new user
 
-router.post('/', (req,res)=>{
+users.post('/', (req,res)=>{
     console.log(req.body)
     if(!req.body.userPhone){
         req.body.userPhone = 'not available'
@@ -45,11 +53,11 @@ router.post('/', (req,res)=>{
     res.redirect('/users')
 })
 
-router.get('*', (req,res)=>{
+users.get('*', (req,res)=>{
     res.render("how not to Dry")
 
 })
 
 
 
-module.exports = router
+module.exports = users
