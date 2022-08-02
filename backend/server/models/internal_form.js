@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Support extends Model {
+  class Internal_Form extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,41 +13,30 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Support.init({
-    support_id: {
+  Internal_Form.init({
+    internal_form_id: {
         type: DataTypes.INTEGER,
-        primaryKey: true,
+        primaryKey:true,
         autoIncrement:true,
         allowNull: false
     },
-
-    support_firstName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    support_lastName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    support_phone: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-    },
-
-    support_email: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-
-    support_comment: {
+    internal_form_note: {
         type: DataTypes.TEXT,
         allowNull: false
     },
+    user_id: {
+        type: DataTypes.INTEGER,
+        allowNull:false
+    },
+    reason_to_contact: {
+        type: DataTypes.STRING,
+        allowNull:false
+    },
   }, {
     sequelize,
-    modelName: 'Support',
-    tableName: 'supports',
-    timestamps: true
+    modelName: 'Internal_Form',
+    tableName: "internal_forms",
+    timestamps:true
   });
-  return Support;
+  return Internal_Form;
 };
