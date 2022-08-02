@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const users = require('../models/users')
+const users = require('../models/user')
 
 
 // GET All Users -- now from the models folder

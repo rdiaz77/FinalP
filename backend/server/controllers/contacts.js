@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const contacts = require('../models/contacts')
+const contacts = require('../models/contact')
 
 
 // GET All Contacts -- from the modules folder

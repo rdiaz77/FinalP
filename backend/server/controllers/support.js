@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const supportRequest = require('../models/support')
+const supportRequest = require('../models/internal_form')
 
 
 
