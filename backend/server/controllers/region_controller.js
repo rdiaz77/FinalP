@@ -1,5 +1,4 @@
 const regions = require('express').Router()
-const { BackendKeyDataMessage } = require('pg-protocol/dist/messages')
 const db = require('../models')
 const {Region} = db
 
@@ -17,9 +16,8 @@ regions.get('/', async(req,res)=>{
     }
 })
 
-//FIND SPECIFIC REGION -- not working
+//FIND SPECIFIC REGION 
 
-// FIND A SPECIFIC BAND
 
 regions.get('/:id', async (req, res) => {
     try {
@@ -33,6 +31,34 @@ regions.get('/:id', async (req, res) => {
 })
 
 
+// CREATE A REGION -- not needed --not working on postman
+regions.post('/', async (req, res) => {
+    try {
+        const newRegion = await Region.create(req.body)
+        res.status(200).json({
+            message: 'Successfully inserted a new region',
+            data: newRegion
+        })
+    } catch(err) {
+        res.status(500).json(err)
+    }
+})
+
+// UPDATE A BAND -- not needed
+regions.put('/:id', async (req, res) => {
+    try {
+        const updatedRegions = await Region.update(req.body, {
+            where: {
+                region_id: req.params.id
+            }
+        })
+        res.status(200).json({
+            message: `Successfully updated ${updatedRegions} region(s)`
+        })
+    } catch(err) {
+        res.status(500).json(err)
+    }
+})
 
 
 
