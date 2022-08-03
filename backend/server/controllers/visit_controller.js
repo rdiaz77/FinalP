@@ -15,16 +15,5 @@ visits.get('/', async(req,res)=>{
     }
 })
 
-//FIND SPECIFIC REGION 
 
-
-// visits.get('/:id', async (req, res) => {
-//     try {
-//         const foundVisit = await Visit.findOne({
-//             where: { visit_id: req.params.id }
-//         })
-//         res.status(200).json(foundRegion)
-//     } catch (error) {
-//         res.status(500).json(error)
-//     }
-// })
+module.exports = visits

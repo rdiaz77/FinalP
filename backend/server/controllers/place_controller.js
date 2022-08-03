@@ -15,3 +15,5 @@ places.get('/', async(req,res)=>{
         
     }
 })
+
+module.exports = places

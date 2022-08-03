@@ -41,11 +41,9 @@ app.use(express.static("public"))
 const regionsController = require('./controllers/region_controller')
 const usersController = require('./controllers/user_controller')
 const visitsController = require('./controllers/visit_controller')
-app.use('/places',require('./controllers/places'))
-app.use('/contacts', require('./controllers/contacts'))
+
 app.use('/users', usersController)
-app.use('/support', require('./controllers/support'))
-app.use('/dashboard', require('./controllers/dashboard'))
+app.use('/places', require('./controllers/place_controller'))
 app.use('/regions', regionsController)
 
 // app.use('/visits', visitsController)

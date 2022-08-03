@@ -2,7 +2,7 @@
 const {
   Model
 } = require('sequelize');
-const { all } = require('../controllers/places');
+// const { all } = require('../controllers/places');
 module.exports = (sequelize, DataTypes) => {
   class County extends Model {
     /**
