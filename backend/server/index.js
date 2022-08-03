@@ -38,12 +38,15 @@ app.use(express.static("public"))
 
 
 // VIEW routes
+const regionsController = require('./controllers/region_controller')
 const usersController = require('./controllers/users')
 app.use('/places',require('./controllers/places'))
 app.use('/contacts', require('./controllers/contacts'))
 app.use('/users', usersController)
 app.use('/support', require('./controllers/support'))
 app.use('/dashboard', require('./controllers/dashboard'))
+app.use('/regions', regionsController)
+
 
 // Homepage route 
 
